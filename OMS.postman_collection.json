@@ -1,0 +1,335 @@
+{
+	"info": {
+		"_postman_id": "24601cb1-b9a7-4b3a-8762-0cd17c8850c6",
+		"name": "OMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32636774",
+		"_collection_link": "https://www.postman.com/vishnukakkodi123/oms/collection/1okpv3i/oms?action=share&source=collection_link&creator=32636774"
+	},
+	"item": [
+		{
+			"name": "manufacture",
+			"item": [
+				{
+					"name": "createManufacture",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufacturename\":\"Vishnu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/manufacture/create",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"manufacture",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufacture\":\"67c98d3a3fc082af6ba2a798\",\r\n    \"productname\":\"White\",\r\n    \"catname\":\"Men\",\r\n    \"description\":\"Nice Watch\",\r\n    \"price\": 30000,\r\n    \"stock\":25\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/manufacture/add-product",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"manufacture",
+								"add-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "faultyProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/manufacture/faulty-products?manufactureId=67c98d3a3fc082af6ba2a798",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"manufacture",
+								"faulty-products"
+							],
+							"query": [
+								{
+									"key": "manufactureId",
+									"value": "67c98d3a3fc082af6ba2a798"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"instock\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/manufacture/update-status/67c9bd8bd22005200d05ff2c",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"manufacture",
+								"update-status",
+								"67c9bd8bd22005200d05ff2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "popularProducts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"manufactureId\":\"67c98d3a3fc082af6ba2a798\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/manufacture/popular-products?page=1&limit=4",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"manufacture",
+								"popular-products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "revenue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/manufacture/revenue?manufactureId=67c98d3a3fc082af6ba2a798",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"manufacture",
+								"revenue"
+							],
+							"query": [
+								{
+									"key": "manufactureId",
+									"value": "67c98d3a3fc082af6ba2a798"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "seller",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sellername\":\"Melvin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/seller/create",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"seller",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"updatedId\":\"67c9b57e07d70f40fa947fcf\",\r\n    \"status\":\"faulty\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/seller/update-status/67c9bd8bd22005200d05ff2c",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"seller",
+								"update-status",
+								"67c9bd8bd22005200d05ff2c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "customer",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customername\":\"Kiran\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/customer/create",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"customer",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "orderPlaced",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customer\":\"67ca778fc5250d6474f49a34\",\r\n    \"product\":\"67c9f0421fe2e118b0a24aeb\",\r\n    \"seller\":\"67c9b57e07d70f40fa947fcf\",\r\n    \"quantity\":1,\r\n    \"totalPrice\":25000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/customer/order-placed",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"customer",
+								"order-placed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "allOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/customer/all-orders",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"customer",
+								"all-orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

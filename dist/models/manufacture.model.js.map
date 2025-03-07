@@ -1,0 +1,1 @@
+{"version":3,"file":"manufacture.model.js","sourceRoot":"","sources":["../../src/models/manufacture.model.ts"],"names":[],"mappings":";;;AAAA,uCAAyC;AAGzC,MAAM,iBAAiB,GAAG,IAAI,iBAAM,CAClC;IACE,eAAe,EAAE,EAAE,IAAI,EAAE,MAAM,EAAE,QAAQ,EAAE,IAAI,EAAE;CAClD,EACD,EAAE,UAAU,EAAE,IAAI,EAAE,CACrB,CAAC;AAEW,QAAA,gBAAgB,GAAG,IAAA,gBAAK,EAAuB,aAAa,EAAE,iBAAiB,CAAC,CAAC"}
